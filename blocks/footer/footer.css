@@ -4,14 +4,14 @@
     padding-bottom: 60px;
 }
 
-@media screen and (max-width: 881px) {
+@media screen and (max-width: 954px) {
     .footer {
         padding-left: calc((100% - 282px * 2 - 21px) / 2);
         padding-right: calc((100% - 282px * 2 - 21px) / 2);
     }
 }
 
-@media screen and (max-width: 581px) {
+@media screen and (max-width: 635px) {
     .footer {
         padding-left: calc((100% - 282px) / 2);
         padding-right: calc((100% - 282px) / 2);
