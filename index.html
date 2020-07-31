@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./pages/index.css">
+  <!-- <link rel="icon" href="./images/favicon.ico" type="image/x-icon"> --->
+  <title>Mesto</title>
+</head>
+<body>
+  <div class="page">
+    <div class="popup">
+      <button type="button" class="popup__close-button"></button>
+      <form class="popup__container">
+        <h3 class="popup__title">Редактироваться профиль</h3>
+        <input type="text" class="popup__display-name">
+        <input type="text" class="popup__proffesion">
+      </form>
+    </div>
+    <header class="header">
+      <img class="logo" src="./images/header__logo.png" alt="логотип Mesto">
+    </header>
+    <main class="content">
+      <section class="profile">
+        <img class="profile__avatar" src="./images/profile__avatar.png" alt="Изображение профиля">
+        <div class="profile__info"> 
+          <h1 class="profile__display-name">Жак-ив Кусто</h1>
+          <button type="button" class="profile__edit-button"></button>
+          <p class="profile__profession">Исследователь океана</p>
+        </div>
+        <button type="button" class="profile__add-button"></button>
+      </section>
+      <section class="places">
+        <div class="place">
+          <img src="./images/place__Andorra.jpg" alt="place-image">
+          <div class="place__description">
+            <h2 class="place__title">Андорра-ла-велья</h2>
+            <button type="button" class="place__like-button"></button>
+          </div>
+        </div>
+        <div class="place">
+          <img src="./images/place__Caprun.jpg" alt="place-image">
+            <div class="place__description">
+              <h2 class="place__title">Ледник Капрун</h2>
+              <button type="button" class="place__like-button"></button>
+          </div>
+        </div>
+        <div class="place">
+          <img src="./images/place__Faro.jpg" alt="place-image">
+          <div class="place__description">
+            <h2 class="place__title">Фаро</h2>
+            <button type="button" class="place__like-button"></button>
+          </div>
+        </div>
+        <div class="place">
+          <img src="./images/place__Georgia.jpg" alt="place-image">
+          <div class="place__description">
+            <h2 class="place__title">Грузия</h2>
+            <button type="button" class="place__like-button"></button>
+          </div>
+        </div>
+        <div class="place">
+          <img src="./images/place__Sevilla.jpg" alt="place-image">
+          <div class="place__description">
+            <h2 class="place__title">Севилья</h2>
+            <button type="button" class="place__like-button"></button>
+          </div>
+        </div>
+        <div class="place">
+          <img src="./images/place__Wien.jpg" alt="place-image">
+          <div class="place__description">
+            <h2 class="place__title">Вена</h2>
+            <button type="button" class="place__like-button"></button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <span class="footer__copyright">&COPY; 2020 Mesto Russia</span>
+    </footer>
+  </div>
+  <script src="./scripts/index.js"></script>
+</body>
+</html>
