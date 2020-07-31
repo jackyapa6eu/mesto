@@ -9,10 +9,11 @@
     width: 100%;
 }
 
-@media screen and (max-width: 581px) {
+@media screen and (max-width: 598px) {
     .profile__profession {
         font-size: 14px;
         line-height: 17px;
         margin-bottom: 36px;
+        text-align: center;
     }
 }

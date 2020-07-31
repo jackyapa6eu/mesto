@@ -14,7 +14,7 @@
     }
 }
 
-@media screen and (max-width: 581px) {
+@media screen and (max-width: 598px) {
     .header {
         padding-left: calc((100% - 290px) / 2);
         padding-right: calc((100% - 290px) / 2);
