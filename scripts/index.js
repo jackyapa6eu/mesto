@@ -9,21 +9,24 @@ const inputProffesion = popUp.querySelector('.popup__text-input_type_profession'
 
 
 
-function togglePopUp() {
+function togglePopUp(event) {
     if (!popUp.classList.contains('popup_opened')) {
         inputDisplayName.value = profileDisplayName.textContent;
         inputProffesion.value = profileProfession.textContent;
     }
-    popUp.classList.toggle('popup_opened');
+    if (event.currentTarget === event.target) {
+        popUp.classList.toggle('popup_opened');
+    }
 }
 
 function updateUserData(event) {
     event.preventDefault();
     profileDisplayName.textContent = inputDisplayName.value;
     profileProfession.textContent = inputProffesion.value;
-    togglePopUp();
+    togglePopUp(event);
 }
 
 profileEditBtn.addEventListener('click', togglePopUp);
+popUp.addEventListener('click', togglePopUp);
 popUpCloseBtn.addEventListener('click', togglePopUp);
 popUpContainer.addEventListener('submit', updateUserData);
