@@ -58,7 +58,7 @@ function showPopUp(task) {
             popupInputs[0].classList.add('popup__text-input_type_place-name');
             popupInputs[0].placeholder = 'Название'
 
-            popupInputs[1].name = 'profession';     
+            popupInputs[1].name = 'placelink';     
             popupInputs[1].classList.add('popup__text-input_type_place-link');
             popupInputs[1].placeholder = 'Ссылка на картинку'
             popupSubmitBtn.textContent = 'Создать';           
