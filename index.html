@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./pages/index.css">
-  <!-- <link rel="icon" href="./images/favicon.ico" type="image/x-icon"> --->
   <title>Mesto</title>
 </head>
 <body>
@@ -23,63 +22,46 @@
         <button type="button" class="profile__add-button"></button>
       </section>
       <section class="places">
-        <article class="place">
-          <img src="./images/place__Andorra.jpg" alt="Фото Андорра-ла-велья">
-          <div class="place__description">
-            <h2 class="place__title">Андорра-ла-велья</h2>
-            <button type="button" class="place__like-button"></button>
-          </div>
-        </article>
-        <article class="place">
-          <img src="./images/place__Caprun.jpg" alt="Фото Ледник Капрун">
-            <div class="place__description">
-              <h2 class="place__title">Ледник Капрун</h2>
-              <button type="button" class="place__like-button"></button>
-          </div>
-        </article>
-        <article class="place">
-          <img src="./images/place__Faro.jpg" alt="Фото Фаро">
-          <div class="place__description">
-            <h2 class="place__title">Фаро</h2>
-            <button type="button" class="place__like-button"></button>
-          </div>
-        </article>
-        <article class="place">
-          <img src="./images/place__Georgia.jpg" alt="Фото Грузия">
-          <div class="place__description">
-            <h2 class="place__title">Грузия</h2>
-            <button type="button" class="place__like-button"></button>
-          </div>
-        </article>
-        <article class="place">
-          <img src="./images/place__Sevilla.jpg" alt="Фото Севилья">
-          <div class="place__description">
-            <h2 class="place__title">Севилья</h2>
-            <button type="button" class="place__like-button"></button>
-          </div>
-        </article>
-        <article class="place">
-          <img src="./images/place__Wien.jpg" alt="Фото Вена">
-          <div class="place__description">
-            <h2 class="place__title">Вена</h2>
-            <button type="button" class="place__like-button"></button>
-          </div>
-        </article>
       </section>
     </main>
     <footer class="footer">
       <p class="footer__copyright">&COPY; 2020 Mesto Russia</p>
     </footer>
-    <div class="popup">
-      <form class="popup__container" name="updateprofile">
+  </div>
+  <template id="full-picture-template">
+    <div class="popup popup_content_figure fade-in">
+      <figure class="popup__figure">
         <button type="button" class="popup__close-button"></button>
-        <h3 class="popup__title">Редактировать профиль</h3>
-        <input type="text" name="displayname" class="popup__text-input popup__text-input_type_display-name" required>
-        <input type="text" name="profession" class="popup__text-input popup__text-input_type_profession" required>
-        <button type="submit" class="popup__save-button">Сохранить</button>
+        <img class="popup__image" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg" alt="фото">
+        <figcaption class="popup__caption">
+          Описание картинки
+        </figcaption>
+      </figure>
+    </div>
+  </template>
+  <template id="popup-template">
+    <div class="popup fade-in">
+      <form class="popup__container" name="popupform">
+        <button type="button" class="popup__close-button"></button>
+        <h3 class="popup__title"></h3>
+        <input type="text" name="" class="popup__text-input" required>
+        <input type="text" name="" class="popup__text-input" required>
+        <button type="submit" class="popup__submit-button"></button>
       </form>
     </div>
-  </div>
+  </template>
+  <template id="place-template">
+    <article class="place">
+      <button class="place__remove-btn"></button>
+      <img class="place__image" src="" alt="">
+      <div class="place__description">
+        <h2 class="place__title"></h2>
+        <svg class="place__like-button" width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18.8005 1.95849L18.8023 1.96024C20.7437 3.88233 20.7462 7.03905 18.8005 8.98466L10.361 17.4238L1.94628 9.00951C1.94569 9.00892 1.94511 9.00832 1.94453 9.00772C1.0188 8.06185 0.5 6.81051 0.5 5.48217C0.5 4.14855 1.00122 2.89987 1.94265 1.95849L1.94266 1.95849L1.94441 1.95672C3.86629 0.0157068 7.02186 0.0131363 8.96748 1.97793L8.96922 1.97967L10.0074 3.01784L10.3646 3.37496L10.7181 3.01425L11.7545 1.95673C13.6994 0.0138381 16.8563 0.014425 18.8005 1.95849Z" stroke="black"/>
+        </svg>
+      </div>
+    </article>
+  </template>
   <script src="./scripts/index.js"></script>
 </body>
 </html>

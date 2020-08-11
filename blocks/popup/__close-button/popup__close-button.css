@@ -12,6 +12,7 @@
     background-size: cover;
     transform: rotate(45deg);
     transition: opacity ease-out .5s;
+    cursor: pointer;
 }
 
 .popup__close-button:hover {
