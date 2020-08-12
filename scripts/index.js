@@ -15,7 +15,6 @@ const popupAddPlace = document.querySelector('.popup_type_add-place');
 const popupFullImage = document.querySelector('.popup_type_figure');
 const fullImage = popupFullImage.querySelector('.popup__image');
 const fullImageName = popupFullImage.querySelector('.popup__caption');
-
 const placeTemplate = document.querySelector('#place-template').content;
 
 function openPopup(popup) {
