@@ -1,8 +1,8 @@
 .place__like-button {
-    transition: opacity .5s ease-out;
-    cursor: pointer;
+  transition: opacity .5s ease-out;
+  cursor: pointer;
 }
 
 .place__like-button:hover {
-    opacity: .6;
+  opacity: .6;
 }

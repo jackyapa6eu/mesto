@@ -27,29 +27,32 @@
     <footer class="footer">
       <p class="footer__copyright">&COPY; 2020 Mesto Russia</p>
     </footer>
-  </div>
-  <template id="full-picture-template">
-    <div class="popup popup_content_figure fade-in">
-      <figure class="popup__figure">
+    <div class="popup popup_type_edit-profile fade-in">
+      <form class="popup__container popup__container_type_edit-profile" name="popupform">
         <button type="button" class="popup__close-button"></button>
-        <img class="popup__image" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg" alt="фото">
-        <figcaption class="popup__caption">
-          Описание картинки
-        </figcaption>
-      </figure>
-    </div>
-  </template>
-  <template id="popup-template">
-    <div class="popup fade-in">
-      <form class="popup__container" name="popupform">
-        <button type="button" class="popup__close-button"></button>
-        <h3 class="popup__title"></h3>
-        <input type="text" name="" class="popup__text-input" required>
-        <input type="text" name="" class="popup__text-input" required>
-        <button type="submit" class="popup__submit-button"></button>
+        <h3 class="popup__title">Редактировать профиль</h3>
+        <input type="text" name="displayname" class="popup__text-input popup__text-input_type_display-name" required>
+        <input type="text" name="profession" class="popup__text-input popup__text-input_type_profession" required>
+        <button type="submit" class="popup__submit-button">Сохранить</button>
       </form>
     </div>
-  </template>
+    <div class="popup popup_type_add-place fade-in">
+      <form class="popup__container popup__container_type_add-place" name="popupform">
+        <button type="button" class="popup__close-button"></button>
+        <h3 class="popup__title">Новое место</h3>
+        <input type="text" name="placename" class="popup__text-input popup__text-input_type_place-name" placeholder="Название" required>
+        <input type="text" name="placelink" class="popup__text-input popup__text-input_type_place-link" placeholder="Ссылка на картинку" required>
+        <button type="submit" class="popup__submit-button">Создать</button>
+      </form>
+    </div>
+    <div class="popup popup_type_figure fade-in">
+      <figure class="popup__figure">
+        <button type="button" class="popup__close-button"></button>
+        <img class="popup__image" src="" alt="">
+        <figcaption class="popup__caption"></figcaption>
+      </figure>
+    </div>
+  </div>
   <template id="place-template">
     <article class="place">
       <button class="place__remove-btn"></button>
@@ -62,6 +65,7 @@
       </div>
     </article>
   </template>
+  <script src="./scripts/initial.js"></script>
   <script src="./scripts/index.js"></script>
 </body>
 </html>
