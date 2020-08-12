@@ -21,8 +21,8 @@ function openPopup(popup) {
   popup.classList.add('popup_opened');
 }
 
-function closePopup(event) {
-  event.target.closest('.popup').classList.remove('popup_opened');
+function closePopup(popup) {
+  popup.classList.remove('popup_opened');
 }
 
 function openEditProfile(popup) {
@@ -35,20 +35,11 @@ function removeElem(event) {
   event.target.closest('.place').remove(); 
 }
 
-function fadePopup(event) {
-  const popup = event.currentTarget.closest('.popup');
-  popup.classList.add('fade-out');
-  window.setTimeout(() => {
-    closePopup(event);
-    popup.classList.remove('fade-out');
-}, 500);
-}
-
 function updateUserData(event) {
   event.preventDefault();
   profileDisplayName.textContent = profileNameInput.value;
   profileProfession.textContent = profileProfessionInput.value;
-  fadePopup(event);
+  closePopup(event.target.closest('.popup'));
 }
 
 function createCard(imgLink, name) {
@@ -69,7 +60,7 @@ function createNewPlace(event) {
   event.preventDefault();
   const card = createCard(newPlaceLinkInput.value, newPlaceNameInput.value);
   places.prepend(card);
-  fadePopup(event);
+  closePopup(event.target.closest('.popup'));
 } 
 
 function toggleLike(event) {
@@ -87,6 +78,6 @@ profileEditBtn.addEventListener('click', () => openEditProfile(popupEditProfile)
 profileAddBtn.addEventListener('click', () => openPopup(popupAddPlace));
 formEditProfile.addEventListener('submit', updateUserData);
 formAddPlace.addEventListener('submit', createNewPlace);
-popUpCloseBtns.forEach(el => el.addEventListener('click', fadePopup));
+popUpCloseBtns.forEach(el => el.addEventListener('click', () => closePopup(event.target.closest('.popup'))));
 
 initialCards.forEach(el => places.prepend(createCard(el.link, el.name)))
