@@ -69,4 +69,20 @@ function hasInvalidInput(inputList) {
   })
 }
 
+function cleanFormBeforeOpen(popup) {
+  const formElement = popup.querySelector(initialValidateObj.formSelector);
+  const inputList = Array.from(formElement.querySelectorAll(initialValidateObj.inputSelector));
+  const buttonElement = formElement.querySelector(initialValidateObj.submitButtonSelector);  
+  const rest = {
+    'inputErrorClass' : initialValidateObj.inputErrorClass, 
+    'errorClass' : initialValidateObj.errorClass
+  };
+  inputList.forEach(inputElement => {
+    inputElement.value = '';
+    hideInputError(formElement, inputElement, rest);
+  })
+  buttonElement.classList.add(initialValidateObj.inactiveButtonClass);
+  buttonElement.setAttribute('disabled', '');
+}
+
 enableValidation(initialValidateObj);
