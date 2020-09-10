@@ -83,5 +83,5 @@ import {  profileEditBtn, profileDisplayName, profileProfession,
           placeTemplateSelector
         } from './data.js'
 import { initialCards } from './initialCards.js'
-import { Card } from './card.js'
-import { FormValidator, initialValidateObj } from './validate.js'
+import { Card } from './Сard.js'
+import { FormValidator, initialValidateObj } from './Validate.js'
