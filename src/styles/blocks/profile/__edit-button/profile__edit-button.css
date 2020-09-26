@@ -4,7 +4,7 @@
     border: solid 1px #FFFFFF;
     outline: none;
     background: none;
-    background-image: url(../../../images/profile__edit-button.svg);
+    background-image: url(../../../../images/profile__edit-button.svg);
     background-repeat: no-repeat;
     background-position: center;
     transition: opacity ease-out .5s;

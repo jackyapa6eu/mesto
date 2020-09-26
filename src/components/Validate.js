@@ -21,7 +21,7 @@ class FormValidator {
     this._setEventListeners();
   }
 
-  cleanFormBeforeOpen() {
+  cleanFormBeforeClose() {
     const self = this;
     this._inputList.forEach(inputElement => {
       inputElement.value = '';
