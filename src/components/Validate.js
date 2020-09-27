@@ -1,12 +1,3 @@
-const initialValidateObj = {
-  formSelector: '.popup__form',
-  inputSelector: '.popup__input',
-  submitButtonSelector: '.popup__button',
-  inactiveButtonClass: 'popup__button_disabled',
-  inputErrorClass: 'popup__input_type_error',
-  errorClass: 'popup__error_visible'
-}
-
 class FormValidator {
   constructor({inputSelector, submitButtonSelector, inactiveButtonClass, inputErrorClass, errorClass}, formElement) {
     this._inputSelector = inputSelector;
@@ -85,5 +76,5 @@ class FormValidator {
   };
 }
 
-export { FormValidator, initialValidateObj }
+export { FormValidator }
 

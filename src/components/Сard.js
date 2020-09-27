@@ -47,7 +47,7 @@ export default class Card {
   }
 
   _removeElem(event) {
-    event.target.closest(".place").remove();
+    event.target.closest(".place").remove(); 
   }
 
   _toggleLike(event) {

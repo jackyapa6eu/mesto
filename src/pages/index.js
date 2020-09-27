@@ -1,4 +1,4 @@
-import './styles/index.css'; 
+import './index.css'; 
 import {
   profileEditBtn,
   displayNameSelector,
@@ -16,14 +16,15 @@ import {
   fullImage,
   fullImageName,
   placeTemplateSelector,
-} from "./components/data.js";
-import { initialCards } from "./components/initialCards.js";
-import Card from "./components/Сard.js";
-import { FormValidator, initialValidateObj } from "./components/Validate.js";
-import Section from "./components/Section.js";
-import PopupWithForm from "./components/PopupWithForm.js";
-import UserInfo from "./components/UserInfo.js";
-import PopupWithImage from "./components/PopupWithImage.js";
+  initialValidateObj
+} from "../utils/data.js";
+import { initialCards } from "../utils/initialCards.js";
+import Card from "../components/Сard.js";
+import { FormValidator } from "../components/Validate.js";
+import Section from "../components/Section.js";
+import PopupWithForm from "../components/PopupWithForm.js";
+import UserInfo from "../components/UserInfo.js";
+import PopupWithImage from "../components/PopupWithImage.js";
 
 const formAddPlaceValidator = new FormValidator(
   initialValidateObj,
@@ -57,9 +58,9 @@ function getCard(cardData) {
 const initialCardList = new Section(
   {
     data: initialCards,
-    renderer: (item) => {
+    renderer: (item, fromArray) => {
       const placeElement = getCard(item);
-      initialCardList.addItem(placeElement);
+      initialCardList.addItem(placeElement, fromArray);
     },
   },
   placesListSelector
@@ -69,9 +70,7 @@ initialCardList.renderItems();
 
 const popupEditProfile = new PopupWithForm(
   popupEditProfileSelector,
-  function handleSubmitForm(event) {
-    event.preventDefault();
-    const userNewData = this._getInputValues();
+  function handleSubmitForm(userNewData) {
     userInfo.setUserInfo(userNewData);
     popupEditProfile.close();
   },
@@ -83,9 +82,7 @@ profileEditBtn.addEventListener("click", openEditProfile);
 
 const popupAddPlace = new PopupWithForm(
   popupAddPlaceSelector,
-  function handleSubmitForm(event) {
-    event.preventDefault();
-    const cardData = this._getInputValues();
+  function handleSubmitForm(cardData) {
     const placeElement = getCard(cardData);
     initialCardList.addItem(placeElement);
     popupAddPlace.close();
