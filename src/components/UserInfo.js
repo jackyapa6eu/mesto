@@ -1,7 +1,8 @@
 export default class UserInfo {
-  constructor({displayNameSelector, professionSelector}) {
+  constructor({displayNameSelector, professionSelector, avatarImageSelector}) {
     this._displayName = document.querySelector(displayNameSelector);
     this._profession = document.querySelector(professionSelector);
+    this._avatarImage = document.querySelector(avatarImageSelector);
   }
   getUserInfo() {
     const userInfo = {
@@ -10,8 +11,16 @@ export default class UserInfo {
     }
     return userInfo
   }
-  setUserInfo({displayname, profession}) {
-    this._displayName.textContent = displayname;
-    this._profession.textContent = profession;
+  getUserId() {
+    return this.myId
+  }
+  setUserInfo(userData) {
+    this.myId = userData._id;
+    this._displayName.textContent = userData.name;
+    this._profession.textContent = userData.about;
+    this.setUserAvatar(userData);
+  }
+  setUserAvatar(userData) {
+    this._avatarImage.src = userData.avatar;
   }
 }
