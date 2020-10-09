@@ -24,7 +24,7 @@ import {
   initialValidateObj,
 } from "../utils/data.js";
 import Card from "../components/Сard.js";
-import { FormValidator } from "../components/Validate.js";
+import { FormValidator } from "../components/FormValidator";
 import Section from "../components/Section.js";
 import PopupWithForm from "../components/PopupWithForm.js";
 import UserInfo from "../components/UserInfo.js";
