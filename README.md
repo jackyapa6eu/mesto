@@ -27,8 +27,8 @@
 * Использование Api
 
 ## Локальная сборка проекта
-git clone https://github.com/jackyapa6eu/active-citizen-2025.git  
-cd active-citizen-2025  
+git clone https://github.com/jackyapa6eu/mesto.git
+cd mesto  
 npm install  
 
 ## Запуск  
