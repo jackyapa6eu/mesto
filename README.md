@@ -27,7 +27,7 @@
 * Использование Api
 
 ## Локальная сборка проекта
-git clone https://github.com/jackyapa6eu/mesto.git
+git clone https://github.com/jackyapa6eu/mesto.git  
 cd mesto  
 npm install  
 
