@@ -15,7 +15,7 @@
 - Асинхронные операции
 - Использование Api
 
-## Устновка проекта
+## Установка проекта
 ```
 git clone https://github.com/jackyapa6eu/mesto.git
 cd mesto  
