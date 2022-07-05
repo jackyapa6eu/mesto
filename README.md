@@ -15,7 +15,7 @@
 - Асинхронные операции
 - Использование Api
 
-## Локальная сборка проекта
+## Сборка проекта
 1. `git clone https://github.com/jackyapa6eu/mesto.git`  
 2. `cd mesto`  
 3. `npm install`  
