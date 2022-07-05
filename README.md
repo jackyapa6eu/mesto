@@ -15,13 +15,22 @@
 - Асинхронные операции
 - Использование Api
 
-## Сборка проекта
-1. `git clone https://github.com/jackyapa6eu/mesto.git`  
-2. `cd mesto`  
-3. `npm install`  
+## Устновка проекта
+```
+git clone https://github.com/jackyapa6eu/mesto.git
+cd mesto  
+npm install
+```
 
 ## Запуск  
-- `npm start`
+```
+npm start
+```
+
+## Сборка 
+```
+npm build
+```
 
 ## Статус проекта: завершен
 
