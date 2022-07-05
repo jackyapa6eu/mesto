@@ -32,7 +32,7 @@ npm start
 npm build
 ```
 
-## Статус проекта: завершен
+## Статус проекта: `завершен`
 
 ## [Ссылка на проект на Github Pages](https://jackyapa6eu.github.io/mesto/index.html)
 
